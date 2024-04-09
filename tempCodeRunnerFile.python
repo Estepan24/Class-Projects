@@ -1,0 +1,19 @@
+expenses = input(f"Enter menu item: ")
+
+menu = {
+    "Beef Stroganoff": 10.99,
+    "Boiled crab": 9.99,
+    "Surf'n'Turf": 16.99 
+}
+
+tax = 50.0
+
+def items():
+    if expenses in menu:
+        price = menu[expenses]
+        total_price = price + tax
+        return f"{expenses} + tax is {total_price}"
+    else:
+        return "Item not found in menu."
+
+print(items())
